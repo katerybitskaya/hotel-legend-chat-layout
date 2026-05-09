@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Legend ★★★★ — Bielsko-Biała</title>
+  <script src="chatbot.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav id="nav">
+    <a href="#" class="nav-logo">
+      LEGEND
+      <span>Bielsko-Biała</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#dining">Dining</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#location">Location</a></li>
+    </ul>
+    <a href="#booking" class="nav-book">Book Now</a>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-photo photo-ph" style="height:100%;">
+        <!-- <img src="images/hotel.jpg" alt="Hotel Legend Exterior" style="width: 100%; height: 100%; object-fit: cover;"> -->
+      </div>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Bielsko-Biała · Poland</p>
+      <h1 class="hero-title">Where <em>Legend</em><br>Begins</h1>
+      <div class="hero-stars">★★★★</div>
+      <p class="hero-sub">An intimate sanctuary of refinement in the heart of the Silesian Beskids — where historic
+        grandeur meets contemporary luxury.</p>
+      <a href="#booking" class="btn-outline">Reserve Your Stay</a>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+
+  <div class="booking-bar" id="booking">
+    <div class="booking-inner">
+      <div class="booking-field">
+        <label>Check-In</label>
+        <input type="date" />
+      </div>
+      <div class="booking-field">
+        <label>Check-Out</label>
+        <input type="date" />
+      </div>
+      <div class="booking-field">
+        <label>Guests</label>
+        <select>
+          <option>1 Guest</option>
+          <option selected>2 Guests</option>
+          <option>3 Guests</option>
+          <option>4 Guests</option>
+        </select>
+      </div>
+      <div class="booking-field">
+        <label>Room Type</label>
+        <select>
+          <option>Any Room</option>
+          <option>Classic Room</option>
+          <option>Superior Room</option>
+          <option>Junior Suite</option>
+          <option>Executive Suite</option>
+          <option>Penthouse Suite</option>
+        </select>
+      </div>
+      <button class="booking-btn">Check Availability</button>
+    </div>
+  </div>
+
+
+  <section id="about">
+    <div class="section">
+      <div class="section-label">Our Story</div>
+
+      <div class="about-grid">
+        <div class="about-photo-stack">
+          <div class="about-main-photo photo-ph">
+            <img src="images/lobby3.jpg" alt="Hotel Lobby" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="about-accent-photo photo-ph">
+            <img src="images/decor detail.jpg" alt="Decor Detail" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <div class="about-text">
+          <h2 class="display">A <em>Legacy</em> of<br>Refined Hospitality</h2>
+          <div class="gold-divider">
+            <div class="gold-diamond"></div>
+          </div>
+          <p>Nestled in the cultural heart of Bielsko-Biała, Hotel Legend stands as a tribute to the region's rich
+            Austro-Hungarian heritage. Our four-star residence occupies a meticulously restored early-20th-century
+            building, offering 62 individually designed rooms and suites.</p>
+          <p>From the moment you enter, the warm glow of brass fixtures, hand-laid stone floors, and a curated
+            collection of local artwork signal an experience entirely apart from the ordinary. Our dedicated team of 80
+            hospitality professionals lives one conviction: that every guest deserves to feel like the protagonist of
+            their own legend.</p>
+          <div class="about-stats">
+            <div>
+              <div class="stat-num">62</div>
+              <div class="stat-label">Rooms & Suites</div>
+            </div>
+            <div>
+              <div class="stat-num">4★</div>
+              <div class="stat-label">Category</div>
+            </div>
+            <div>
+              <div class="stat-num">1923</div>
+              <div class="stat-label">Est. Year</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="highlights-bg">
+    <div class="section">
+      <div class="section-label">Why Legend</div>
+      <h2 class="display">The <em>Essence</em> of<br>Our Difference</h2>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">🏔️</div>
+          <h3>Beskid Mountain Views</h3>
+          <p>Wake to panoramic vistas of the Silesian Beskids from select rooms and the rooftop terrace.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">🍽️</div>
+          <h3>Fine Dining Restaurant</h3>
+          <p>Michelin-recommended cuisine celebrating regional Silesian ingredients with contemporary technique.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">🧖</div>
+          <h3>Legend Wellness Spa</h3>
+          <p>700 m² of pure relaxation — pool, saunas, treatment rooms and personalised wellness rituals.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">📍</div>
+          <h3>Prime City Location</h3>
+          <p>Steps from the Old Town, Castle Hill, and the main cultural and business districts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="rooms">
+    <div class="section">
+      <div class="section-label">Accommodations</div>
+      <h2 class="display">Rooms &amp; <em>Suites</em></h2>
+
+      <div class="rooms-grid">
+
+        <div class="room-card">
+          <div class="photo-ph room-photo" style="height:400px;">
+            <img src="images/Classic-Rooms.jpg" alt="Classic Room" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="room-photo-overlay">
+            <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore Room
+              →</a>
+          </div>
+          <div class="room-info">
+            <div class="room-type">Standard</div>
+            <div class="room-name">Classic Room</div>
+            <div class="room-details">
+              <span>25 m²</span>
+              <span>·</span>
+              <span>King or Twin</span>
+              <span>·</span>
+              <span>City View</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div class="room-price">from PLN 490 <small>/ night</small></div>
+              <a href="#" class="btn-ghost">Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="photo-ph room-photo" style="height:400px;">
+            <img src="images/Junior-Suite.jpg" alt="Junior Suite" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="room-photo-overlay">
+            <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore Suite
+              →</a>
+          </div>
+          <div class="room-info">
+            <div class="room-type">Premium</div>
+            <div class="room-name">Junior Suite</div>
+            <div class="room-details">
+              <span>42 m²</span>
+              <span>·</span>
+              <span>King Bed</span>
+              <span>·</span>
+              <span>Lounge Area</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div class="room-price">from PLN 760 <small>/ night</small></div>
+              <a href="#" class="btn-ghost">Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="photo-ph room-photo" style="height:400px;">
+            <img src="images/Executive-Suite.jpg" alt="Executive Suite" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="room-photo-overlay">
+            <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore Suite
+              →</a>
+          </div>
+          <div class="room-info">
+            <div class="room-type">Signature</div>
+            <div class="room-name">Executive Suite</div>
+            <div class="room-details">
+              <span>68 m²</span>
+              <span>·</span>
+              <span>King Bed</span>
+              <span>·</span>
+              <span>Panoramic View</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div class="room-price">from PLN 1 290 <small>/ night</small></div>
+              <a href="#" class="btn-ghost">Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card" style="grid-column: span 2;">
+          <div class="photo-ph room-photo" style="height:400px;">
+            <img src="images/Legend-Penthouse.jpg" alt="Penthouse Suite" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="room-photo-overlay">
+            <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore
+              Penthouse →</a>
+          </div>
+          <div class="room-info">
+            <div class="room-type">Penthouse · Most Exclusive</div>
+            <div class="room-name">Legend Penthouse</div>
+            <div class="room-details">
+              <span>120 m²</span>
+              <span>·</span>
+              <span>Two Bedrooms</span>
+              <span>·</span>
+              <span>Private Terrace</span>
+              <span>·</span>
+              <span>Butler Service</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div class="room-price">from PLN 2 800 <small>/ night</small></div>
+              <a href="#" class="btn-ghost">Full Details →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="photo-ph room-photo" style="height:400px;">
+            <img src="images/Superior-Room.jpg" alt="Superior Room" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="room-photo-overlay">
+            <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore Room
+              →</a>
+          </div>
+          <div class="room-info">
+            <div class="room-type">Comfort</div>
+            <div class="room-name">Superior Room</div>
+            <div class="room-details">
+              <span>32 m²</span>
+              <span>·</span>
+              <span>King or Twin</span>
+              <span>·</span>
+              <span>Garden View</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div class="room-price">from PLN 620 <small>/ night</small></div>
+              <a href="#" class="btn-ghost">Details →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="view-all-wrap">
+        <a href="#" class="btn-outline">View All Accommodations</a>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="amenities-bg" id="amenities">
+    <div class="section">
+      <div class="section-label">Room Features</div>
+      <h2 class="display">In-Room <em>Amenities</em></h2>
+
+      <div class="amenities-layout">
+        <div class="amenities-photo photo-ph">
+          <img src="images/Bathroom-detail.jpg" alt="Bathroom Detail" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div class="amenities-list">
+          <div class="amenity-item">
+            <div class="amenity-icon">📶</div>
+            <div>
+              <h4>High-Speed Wi-Fi</h4>
+              <p>Complimentary fibre-optic internet, up to 500 Mbps throughout all rooms and public areas.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">📺</div>
+            <div>
+              <h4>Smart TV</h4>
+              <p>55" 4K screens with international streaming platforms, Netflix and casting capability.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">❄️</div>
+            <div>
+              <h4>Climate Control</h4>
+              <p>Individual air conditioning and heating in every room with silent operation technology.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">🛁</div>
+            <div>
+              <h4>Premium Bathroom</h4>
+              <p>Rain shower, bathtub (select rooms), Acqua di Parma toiletries and plush robes.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">☕</div>
+            <div>
+              <h4>Nespresso & Minibar</h4>
+              <p>Premium coffee machine, curated minibar with local craft beverages and artisan snacks.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">🔒</div>
+            <div>
+              <h4>Digital Safe</h4>
+              <p>In-room digital safe large enough for a 15" laptop. Electronic key card access.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">🛎️</div>
+            <div>
+              <h4>24h Room Service</h4>
+              <p>Full dining menu available around the clock — delivered within 30 minutes, guaranteed.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">💼</div>
+            <div>
+              <h4>Work Desk & USB</h4>
+              <p>Ergonomic workspace with USB-C ports, wireless charging pad and adjustable lighting.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">🔊</div>
+            <div>
+              <h4>Bluetooth Speaker</h4>
+              <p>Bose SoundLink audio system for your personal listening pleasure.</p>
+            </div>
+          </div>
+          <div class="amenity-item">
+            <div class="amenity-icon">🌿</div>
+            <div>
+              <h4>Eco Toiletries</h4>
+              <p>Certified organic, refillable dispensers — sustainably sourced, cruelty-free formulas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="dining">
+    <div class="section">
+      <div class="section-label">Gastronomy</div>
+      <h2 class="display">Taste the <em>Legend</em></h2>
+
+      <div class="dining-grid">
+        <div class="dining-main photo-ph" style="position:relative; height:520px;">
+          <img src="images/Restaurant-Beskid1.jpg" alt="Restaurant Beskid"
+            style="width: 100%; height: 100%; object-fit: cover;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+            style="display:none;">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <path d="m21 15-5-5L5 21" />
+          </svg>
+          <span style="display:none;">Restaurant main hall — ambient shot<br>780 × 520 px</span>
+          <div class="dining-caption">
+            <div class="section-label" style="margin-bottom:8px;">Fine Dining</div>
+            <h3>Restaurant Beskid</h3>
+            <p>Open daily · Breakfast 7–11 · Dinner 18–23 · Reservations recommended</p>
+          </div>
+        </div>
+        <div class="dining-side">
+          <div class="dining-side-photo photo-ph">
+            <img src="images/Restaurant-Beskid2.jpg" alt="Signature Dish"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="dining-side-photo photo-ph">
+            <img src="images/meal.jpg" alt="Legend Bar"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
+      <div class="highlights-grid" style="margin-top:3px; border-top:none;">
+        <div class="highlight-card" style="border:1px solid var(--border); border-right:none;">
+          <div class="highlight-icon">🍳</div>
+          <h3>Buffet Breakfast</h3>
+          <p>Lavish spread of local and international breakfast items with à la carte hot dishes.</p>
+        </div>
+        <div class="highlight-card" style="border:1px solid var(--border); border-right:none;">
+          <div class="highlight-icon">🍷</div>
+          <h3>Wine Cellar</h3>
+          <p>750 labels from Poland, France, and Italy — guided by our resident sommelier.</p>
+        </div>
+        <div class="highlight-card" style="border:1px solid var(--border); border-right:none;">
+          <div class="highlight-icon">🍸</div>
+          <h3>Legend Bar</h3>
+          <p>Craft cocktails and live piano music every Friday and Saturday evening from 20:00.</p>
+        </div>
+        <div class="highlight-card" style="border:1px solid var(--border);">
+          <div class="highlight-icon">🎂</div>
+          <h3>Private Events</h3>
+          <p>Bespoke banquets, corporate dinners and celebrations for up to 120 guests.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="highlights-bg" id="offers">
+    <div class="section">
+      <div class="section-label">Special Offers</div>
+      <h2 class="display">Curated <em>Packages</em></h2>
+
+      <div class="offers-grid">
+        <div class="offer-card">
+          <div class="offer-photo photo-ph">
+            <img src="images/Romantic.jpg" alt="Romantic Getaway" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="offer-body">
+            <div class="offer-tag">Romance</div>
+            <h3>Weekend Escape</h3>
+            <p>Two nights in a Junior Suite with sparkling wine on arrival, candlelit dinner and late check-out at
+              14:00.</p>
+            <div class="offer-saving">Save 18% vs. rack rate</div>
+            <a href="#" class="btn-ghost">Discover Offer →</a>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <div class="offer-photo photo-ph">
+            <img src="images/Spa-Retreat.jpg" alt="Spa Retreat" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="offer-body">
+            <div class="offer-tag">Wellness</div>
+            <h3>Spa Retreat</h3>
+            <p>Three nights with daily access to the spa, one 60-min massage per person and healthy breakfast included.
+            </p>
+            <div class="offer-saving">Save 22% vs. rack rate</div>
+            <a href="#" class="btn-ghost">Discover Offer →</a>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <div class="offer-photo photo-ph">
+            <img src="images/Business-conference.jpg" alt="Business Executive"
+              style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="offer-body">
+            <div class="offer-tag">Business</div>
+            <h3>Executive Stay</h3>
+            <p>Minimum 2 nights in a Superior Room or higher with express laundry, early check-in and meeting room
+              access.</p>
+            <div class="offer-saving">Complimentary upgrades</div>
+            <a href="#" class="btn-ghost">Discover Offer →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="reviews-bg" id="reviews">
+    <div class="section">
+      <div class="reviews-header">
+        <div>
+          <div class="section-label">Guest Voices</div>
+          <h2 class="display">What Our Guests <em>Say</em></h2>
+        </div>
+        <div class="reviews-score">
+          <div class="score-num">9.4</div>
+          <div class="score-label">Booking.com · Exceptional</div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-platform">Booking.com</div>
+          <div class="review-quote">"</div>
+          <p class="review-text">An absolutely stunning hotel — the service was impeccable from check-in to check-out.
+            Our suite overlooked a charming courtyard and the breakfast buffet was the finest we've had in Poland.</p>
+          <div class="review-author">
+            <div class="review-avatar">MH</div>
+            <div>
+              <div class="review-name">Margaret & Hans Berger</div>
+              <div class="review-meta">Vienna, Austria · Junior Suite</div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-platform">Google</div>
+          <div class="review-quote">"</div>
+          <p class="review-text">The Restaurant Beskid deserves its own review — the tasting menu was extraordinary.
+            Paired with a bottle from the wine cellar, it was one of the best meals of our trip to Poland.</p>
+          <div class="review-author">
+            <div class="review-avatar">TK</div>
+            <div>
+              <div class="review-name">Tomasz Kowalczyk</div>
+              <div class="review-meta">Warsaw, Poland · Superior Room</div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-platform">TripAdvisor</div>
+          <div class="review-quote">"</div>
+          <p class="review-text">Exceptional spa, immaculate rooms and a location that makes exploring the old town
+            effortless. The concierge arranged a mountain hiking guide in under an hour. Truly five-star service.</p>
+          <div class="review-author">
+            <div class="review-avatar">SB</div>
+            <div>
+              <div class="review-name">Sophie Beaumont</div>
+              <div class="review-meta">London, UK · Executive Suite</div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-all-wrap" style="margin-top:36px;">
+        <a href="#" class="btn-outline">Read All Reviews</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="location-bg" id="location">
+    <div class="section">
+      <div class="section-label">Find Us</div>
+      <h2 class="display">Prime <em>Location</em></h2>
+
+      <div class="location-grid">
+        <div>
+          <div class="map-frame">
+            <div class="map-placeholder photo-ph" style="height:100%;">
+              <div class="map-pin">📍</div>
+              <div class="map-label">Hotel Legend</div>
+              <div class="map-address">ul. Legionów 27, 43-300 Bielsko-Biała</div>
+              <a href="https://maps.google.com" target="_blank" class="map-open-link">Open in Google Maps ↗</a>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <label>Phone</label>
+              <a href="tel:+48334567890">+48 33 456 78 90</a>
+            </div>
+            <div class="contact-item">
+              <label>Email</label>
+              <a href="mailto:hello@hotellegend.pl">hello@hotellegend.pl</a>
+            </div>
+            <div class="contact-item">
+              <label>Check-In / Check-Out</label>
+              <p>15:00 / 12:00</p>
+            </div>
+            <div class="contact-item">
+              <label>Reception</label>
+              <p>Open 24 hours</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-info">
+          <h3>In the Heart of the City</h3>
+          <p>Hotel Legend is ideally positioned in the historic centre of Bielsko-Biała — a city known for its
+            magnificent Austro-Hungarian architecture, vibrant arts scene and the gateway to the Silesian Beskids
+            mountain range.</p>
+
+          <h3>Getting Here</h3>
+          <p>We are easily reachable by car via the A1 motorway (exit Bielsko-Biała Centre), by train to Bielsko-Biała
+            Central Station (12 min walk), and by air via Katowice International Airport (65 km, approx. 55 min by car).
+            Private airport transfers available on request.</p>
+
+          <h3>Nearby Attractions</h3>
+          <ul class="nearby-list">
+            <li>Bielsko-Biała Old Town Market <span>3 min walk</span></li>
+            <li>Sułkowski Castle <span>5 min walk</span></li>
+            <li>Żywiec Brewery Museum <span>30 min drive</span></li>
+            <li>Szczyrk Ski Resort <span>25 min drive</span></li>
+            <li>Auschwitz-Birkenau Memorial <span>55 min drive</span></li>
+            <li>Katowice City Centre <span>60 min drive</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="cta-strip">
+    <h2>Begin Your Legend Tonight</h2>
+    <p>Direct booking guarantees our best available rate and exclusive perks</p>
+    <a href="#booking" class="btn-dark">Reserve Now</a>
+  </div>
+
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-large">HOTEL LEGEND ★★★★</div>
+        <p>A tribute to the heritage and spirit of Bielsko-Biała. We welcome you to experience extraordinary hospitality
+          in the heart of the Silesian Beskids.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="#" class="social-btn" title="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+          <a href="#" class="social-btn" title="TripAdvisor">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m16.2 7.8-4.2 9.4-4.2-9.4 9.4 4.2z" />
+            </svg>
+          </a>
+          <a href="#" class="social-btn" title="Booking.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+            </svg>
+          </a>
+          <a href="#" class="social-btn" title="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+              <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About Hotel Legend</a></li>
+          <li><a href="#rooms">Rooms & Suites</a></li>
+          <li><a href="#dining">Restaurant & Bar</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#">Spa & Wellness</a></li>
+          <li><a href="#">Conference Rooms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Offers</h4>
+        <ul>
+          <li><a href="#offers">Special Packages</a></li>
+          <li><a href="#">Early Bird Rate</a></li>
+          <li><a href="#">Long Stay Discount</a></li>
+          <li><a href="#">Gift Vouchers</a></li>
+          <li><a href="#">Corporate Rates</a></li>
+          <li><a href="#">Wedding Packages</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="#">Cancellation Policy</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Press & Media</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#location">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      style="border-top:1px solid var(--border); padding: 20px 48px; max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; font-size:0.7rem; color:var(--text-dim);">
+      <span>© 2025 Hotel Legend Bielsko-Biała. All rights reserved.</span>
+      <div style="display:flex; gap:24px;">
+        <a href="#" style="color:var(--text-dim); text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="color:var(--text-dim); text-decoration:none;">Cookie Settings</a>
+        <a href="#" style="color:var(--text-dim); text-decoration:none;">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
