@@ -23,6 +23,7 @@ hotel/
 ├── bazawiedzy.md       # Chatbot knowledge base about the hotel
 ├── prompt.md           # System prompt / persona for the AI assistant
 ├── package.json
+├── .env.example        # Template for .env
 └── .env                # API keys (not in repository)
 ```
 
@@ -33,7 +34,7 @@ hotel/
    ```bash
    npm install
    ```
-3. Create a `.env` file in the project root:
+3. Create a `.env` file in the project root (copy `.env.example`):
    ```env
    GEM_KEY=your_google_gemini_api_key
    GEM_MODEL=gemini-2.5-flash
