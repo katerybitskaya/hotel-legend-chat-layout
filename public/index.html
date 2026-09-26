@@ -8,11 +8,11 @@
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 5 L90 25 L90 75 L50 95 L10 75 L10 25 Z' fill='%231a1a1a'/><path d='M50 20 L75 35 L75 65 L50 80 L25 65 L25 35 Z' fill='%23d4af37'/><text x='50' y='65' font-size='40' text-anchor='middle' fill='white' font-family='serif'>L</text></svg>" />
   <script src="chatbot.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Шрифты грузятся без блокировки отрисовки страницы -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" /></noscript>
+  <!-- Свои шрифты (public/fonts/). Preload — шрифты заголовка первого экрана, чтобы он не «прыгал» -->
+  <link rel="preload" href="fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/cormorant-garamond-latin-300-italic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/jost-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="fonts.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -126,10 +126,10 @@
       <div class="about-grid">
         <div class="about-photo-stack">
           <div class="about-main-photo photo-ph">
-            <img loading="lazy" decoding="async" src="images/lobby3.jpg" alt="Hotel Lobby" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/lobby3.jpg" alt="Hotel Lobby" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="about-accent-photo photo-ph">
-            <img loading="lazy" decoding="async" src="images/decor detail.jpg" alt="Decor Detail" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/decor detail.jpg" alt="Decor Detail" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
 
@@ -205,7 +205,7 @@
 
         <div class="room-card">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img loading="lazy" decoding="async" src="images/Classic-Rooms.jpg" alt="Classic Room"
+            <img src="images/Classic-Rooms.jpg" alt="Classic Room"
               style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
@@ -231,7 +231,7 @@
 
         <div class="room-card">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img loading="lazy" decoding="async" src="images/Junior-Suite.jpg" alt="Junior Suite" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/Junior-Suite.jpg" alt="Junior Suite" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
             <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore Suite
@@ -256,7 +256,7 @@
 
         <div class="room-card">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img loading="lazy" decoding="async" src="images/Executive-Suite.jpg" alt="Executive Suite"
+            <img src="images/Executive-Suite.jpg" alt="Executive Suite"
               style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
@@ -282,7 +282,7 @@
 
         <div class="room-card" style="grid-column: span 2;">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img loading="lazy" decoding="async" src="images/Legend-Penthouse.jpg" alt="Penthouse Suite"
+            <img src="images/Legend-Penthouse.jpg" alt="Penthouse Suite"
               style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
@@ -310,7 +310,7 @@
 
         <div class="room-card">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img loading="lazy" decoding="async" src="images/Superior-Room.jpg" alt="Superior Room"
+            <img src="images/Superior-Room.jpg" alt="Superior Room"
               style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
@@ -350,7 +350,7 @@
 
       <div class="amenities-layout">
         <div class="amenities-photo photo-ph">
-          <img loading="lazy" decoding="async" src="images/Bathroom-detail.jpg" alt="Bathroom Detail"
+          <img src="images/Bathroom-detail.jpg" alt="Bathroom Detail"
             style="width: 100%; height: 100%; object-fit: cover;">
         </div>
 
@@ -438,7 +438,7 @@
 
       <div class="dining-grid">
         <div class="dining-main photo-ph" style="position:relative; height:520px;">
-          <img loading="lazy" decoding="async" src="images/Restaurant-Beskid1.jpg" alt="Restaurant Beskid"
+          <img src="images/Restaurant-Beskid1.jpg" alt="Restaurant Beskid"
             style="width: 100%; height: 100%; object-fit: cover;">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
             style="display:none;">
@@ -455,11 +455,11 @@
         </div>
         <div class="dining-side">
           <div class="dining-side-photo photo-ph">
-            <img loading="lazy" decoding="async" src="images/Restaurant-Beskid2.jpg" alt="Signature Dish"
+            <img src="images/Restaurant-Beskid2.jpg" alt="Signature Dish"
               style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="dining-side-photo photo-ph">
-            <img loading="lazy" decoding="async" src="images/meal.jpg" alt="Legend Bar" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/meal.jpg" alt="Legend Bar" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -498,7 +498,7 @@
       <div class="offers-grid">
         <div class="offer-card">
           <div class="offer-photo photo-ph">
-            <img loading="lazy" decoding="async" src="images/Romantic.jpg" alt="Romantic Getaway" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/Romantic.jpg" alt="Romantic Getaway" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="offer-body">
             <div class="offer-tag">Romance</div>
@@ -512,7 +512,7 @@
 
         <div class="offer-card">
           <div class="offer-photo photo-ph">
-            <img loading="lazy" decoding="async" src="images/Spa-Retreat.jpg" alt="Spa Retreat" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/Spa-Retreat.jpg" alt="Spa Retreat" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="offer-body">
             <div class="offer-tag">Wellness</div>
@@ -526,7 +526,7 @@
 
         <div class="offer-card">
           <div class="offer-photo photo-ph">
-            <img loading="lazy" decoding="async" src="images/Business-conference.jpg" alt="Business Executive"
+            <img src="images/Business-conference.jpg" alt="Business Executive"
               style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="offer-body">

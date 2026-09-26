@@ -16,6 +16,8 @@ hotel/
 ├── public/             # Static frontend files served by Node.js
 │   ├── index.html      # Main landing page
 │   ├── style.css       # Styles
+│   ├── fonts.css       # Self-hosted font faces
+│   ├── fonts/          # Cormorant Garamond & Jost (woff2, SIL OFL)
 │   ├── script.js       # Page interactions
 │   └── chatbot.js      # Chatbot UI & socket client
 ├── serwis.js           # Node.js server (Express + Socket.io + Gemini)
