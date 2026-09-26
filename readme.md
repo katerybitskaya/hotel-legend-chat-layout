@@ -20,8 +20,9 @@ hotel/
 │   └── chatbot.js      # Chatbot UI & socket client
 ├── serwis.js           # Node.js server (Express + Socket.io + Gemini)
 ├── ecosystem.config.js # PM2 process manager config (production)
-├── bazawiedzy.md       # Chatbot knowledge base about the hotel
-├── prompt.md           # System prompt / persona for the AI assistant
+├── chatbot/            # Files used by the AI assistant
+│   ├── bazawiedzy.md   # Knowledge base about the hotel
+│   └── prompt.md       # System prompt / persona for the AI assistant
 ├── package.json
 ├── .env.example        # Template for .env
 └── .env                # API keys (not in repository)
@@ -49,7 +50,7 @@ hotel/
 
 ## Chatbot Configuration
 
-The chatbot behaviour is controlled by two Markdown files:
+The chatbot behaviour is controlled by two Markdown files in the `chatbot/` folder:
 - **`bazawiedzy.md`** — knowledge base with information about the hotel (rooms, dining, amenities, etc.)
 - **`prompt.md`** — system instruction that defines the AI assistant's persona and rules
 

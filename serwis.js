@@ -22,17 +22,17 @@ if (!fs.existsSync(HISTORY_DIR)) {
 
 let knowledgeBase = '';
 try {
-    knowledgeBase = fs.readFileSync('bazawiedzy.md', 'utf8');
+    knowledgeBase = fs.readFileSync(path.join(__dirname, 'chatbot', 'bazawiedzy.md'), 'utf8');
 } catch (err) {
-    console.error("Error reading bazawiedzy.md:", err);
+    console.error("Error reading chatbot/bazawiedzy.md:", err);
     knowledgeBase = "Knowledge base is unavailable.";
 }
 
 let systemInstruction = '';
 try {
-    systemInstruction = fs.readFileSync('prompt.md', 'utf8');
+    systemInstruction = fs.readFileSync(path.join(__dirname, 'chatbot', 'prompt.md'), 'utf8');
 } catch (err) {
-    console.error("Error reading prompt.md:", err);
+    console.error("Error reading chatbot/prompt.md:", err);
     systemInstruction = "You are a helpful AI assistant.";
 }
 
@@ -77,8 +77,8 @@ io.on('connection', (socket) => {
     const sessionFilePath = path.join(HISTORY_DIR, sessionFileBase);
 
     let conversationHistory = [];
-
-    saveHistory(sessionFilePath, conversationHistory);
+    // Файл истории создаётся только при первом сообщении (ниже, в 'chat message'),
+    // чтобы простое открытие страницы не оставляло пустых файлов в historia/
 
     socket.on('chat message', async (msg) => {
         console.log(`[${sessionId}] User:`, msg);

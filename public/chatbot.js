@@ -25,7 +25,9 @@
                 date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
                 expires = "; expires=" + date.toUTCString();
             }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/; Secure; SameSite=Strict";
+            // Secure только на https — иначе на http браузер не сохранит cookie
+            var secure = location.protocol === 'https:' ? '; Secure' : '';
+            document.cookie = name + "=" + (value || "") + expires + "; path=/" + secure + "; SameSite=Strict";
         }
 
         function getCookie(name) {
@@ -256,7 +258,11 @@
         const socket = io(SERVER_URL, {
             query: {
                 sessionId: sessionId
-            }
+            },
+            // Сразу пробуем WebSocket (без долгого старта через HTTP-polling);
+            // если WebSocket недоступен — автоматически переключаемся на polling
+            transports: ['websocket', 'polling'],
+            tryAllTransports: true
         });
 
         const toggleBtn = document.getElementById('chatbot-toggle-btn');
