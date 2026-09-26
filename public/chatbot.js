@@ -2,12 +2,14 @@
     if (document.getElementById('chatbot-widget-container')) return;
 
     const socketScript = document.createElement('script');
-    socketScript.src = 'https://localhost:3000/socket.io/socket.io.js';
+    //socketScript.src = 'http://localhost:3000/socket.io/socket.io.js'; //для локального
+    socketScript.src = 'https://hotel.altora.ovh/socket.io/socket.io.js'; //для VNS
     socketScript.onload = initChatbot;
     document.head.appendChild(socketScript);
 
     function initChatbot() {
-        const SERVER_URL = 'https://localhost:3000';
+        const SERVER_URL = 'hotel.altora.ovh'; //для VNS
+        //const SERVER_URL = 'http://localhost:3000'; //для локального
 
         function generateUUID() {
             return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -82,8 +84,8 @@
                 display: none;
                 flex-direction: column;
                 width: 380px;
-                height: 500px;
-                max-height: 80vh;
+                height: 440px;
+                max-height: 70vh;
                 background: var(--mid, #1c1c18);
                 border: 1px solid var(--border, rgba(201,169,110,0.18));
                 border-radius: 4px;
@@ -93,6 +95,24 @@
                 right: 0;
                 overflow: hidden;
                 animation: slideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            @media (max-width: 480px) {
+                #chatbot-widget-container {
+                    right: 16px;
+                    bottom: 16px;
+                    left: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                #chatbot-window {
+                    width: 100%;
+                    max-width: none;
+                    left: 0;
+                    right: 0;
+                    height: 65vh;
+                    max-height: 65vh;
+                }
             }
             @keyframes slideIn {
                 from { opacity: 0; transform: translateY(20px); }

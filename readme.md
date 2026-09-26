@@ -1,26 +1,71 @@
-# Hotel Legend - Web App & AI Chatbot
+# Hotel Legend — Landing Page & AI Chatbot
 
-A luxurious landing page for "Hotel Legend" featuring a modern design and an integrated AI assistant.
+A luxurious landing page for **Hotel Legend** featuring a modern design and an integrated AI assistant powered by Google Gemini.
 
-## Technologies Used
-* **Frontend:** HTML5, modern CSS3, Vanilla JavaScript.
-* **Backend:** Node.js, Express.js.
-* **Real-time Communication:** Socket.io.
-* **AI Integration:** Google Gemini AI (and fallback to local Llama models).
+## Technologies
 
-## Project Setup
-1. Ensure Node.js is installed.
-2. Clone this repository (or open the local folder).
-3. Install dependencies by running:
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript
+- **Backend:** Node.js, Express.js
+- **Real-time communication:** Socket.io
+- **AI:** Google Gemini API (`@google/genai`)
+
+## Project Structure
+
+```
+hotel/
+├── public/             # Static frontend files served by Node.js
+│   ├── index.html      # Main landing page
+│   ├── style.css       # Styles
+│   ├── script.js       # Page interactions
+│   └── chatbot.js      # Chatbot UI & socket client
+├── serwis.js           # Node.js server (Express + Socket.io + Gemini)
+├── ecosystem.config.js # PM2 process manager config (production)
+├── bazawiedzy.md       # Chatbot knowledge base about the hotel
+├── prompt.md           # System prompt / persona for the AI assistant
+├── package.json
+└── .env                # API keys (not in repository)
+```
+
+## Setup
+
+1. Install Node.js (v20+ recommended)
+2. Clone the repository and install dependencies:
    ```bash
    npm install
    ```
-4. Verify or create your environment variables in `.env` (like `GEM_KEY` for Google Gemini). Ensure SSL certificates (`ss.crt`, `ss.key`) are present in the root folder.
-5. Start the server:
+3. Create a `.env` file in the project root:
+   ```env
+   GEM_KEY=your_google_gemini_api_key
+   GEM_MODEL=gemini-2.5-flash
+   CHAT_WLASNY=false
+   ```
+   The port is fixed in `serwis.js` (`const PORT = 3000`) and is not read from `.env`.
+4. Start the server:
    ```bash
    node serwis.js
    ```
-6. Open your browser and navigate to `https://localhost:3000`. The frontend interface and the chatbot will both run perfectly using this unified port.
+5. Open `http://localhost:3000` in your browser.
+   For local testing without a domain, switch the socket.io address in `public/chatbot.js`
+   (lines 5–6 and 11–12) to `http://localhost:3000`; on the VPS / behind the tunnel keep
+   `hotel.altora.ovh`.
 
-## Note
-SSL certificates (`ss.crt`, `ss.key`) and environment files like `.env`, as well as the `.gitignore` itself are intentionally ignored by Git to protect sensitive details from being exposed publicly.
+## Chatbot Configuration
+
+The chatbot behaviour is controlled by two Markdown files:
+- **`bazawiedzy.md`** — knowledge base with information about the hotel (rooms, dining, amenities, etc.)
+- **`prompt.md`** — system instruction that defines the AI assistant's persona and rules
+
+Edit these files to customise the chatbot without touching the server code.
+
+## Production (VPS)
+
+The server is managed by PM2:
+```bash
+pm2 start ecosystem.config.js
+pm2 save
+```
+
+## Notes
+
+- `.env`, `historia/` (chat history), and SSL certificate files are excluded from Git.
+- For local development the server uses plain HTTP. SSL is available via commented-out code in `serwis.js`.

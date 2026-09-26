@@ -1,5 +1,6 @@
 const express = require('express');
-const https = require('https');
+// const https = require('https'); // для SSL(локально)
+const http = require('http'); // для VNS
 const fs = require('fs');
 const socketIo = require('socket.io');
 const cors = require('cors');
@@ -38,18 +39,21 @@ try {
 const GEM_MODEL = process.env.GEM_MODEL || "gemini-2.5-flash";
 const ai = new GoogleGenAI({ apiKey: process.env.GEM_KEY });
 
-const options = {
-    key: fs.readFileSync('ss.key'),
-    cert: fs.readFileSync('ss.crt')
-};
+// для локального с SSL
+// const options = {
+//     key: fs.readFileSync('ss.key'),
+//     cert: fs.readFileSync('ss.crt')
+// };
 
-const server = https.createServer(options, app);
+// const server = https.createServer(options, app); //для локального с SSL
+const server = http.createServer(app); //для VNS
 const io = socketIo(server, {
     cors: {
         origin: "*",
         methods: ["GET", "POST"]
     }
 });
+
 
 function getTimestamp() {
     const now = new Date();
@@ -187,5 +191,5 @@ function saveHistory(filePath, history) {
 
 const PORT = 3000;
 server.listen(PORT, () => {
-    console.log(`Server running on https://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });

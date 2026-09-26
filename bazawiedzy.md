@@ -8,7 +8,7 @@ From the moment you enter, the warm glow of brass elements, hand-laid stone floo
 * **Name:** Hotel Legend ★★★★
 * **Address:** ul. Legionów 27, 43-300 Bielsko-Biała
 * **Phone:** +48 33 456 78 90
-* **E-mail:** reservations@hotellegend.pl
+* **E-mail:** hello@hotellegend.pl
 * **Reception:** Open 24h
 * **Check-in / Check-out:** 15:00 / 12:00
 
@@ -39,7 +39,7 @@ Hotel Legend offers 62 rooms and suites, each an oasis of luxury and comfort.
 # PRICING
 Approximate prices per night (starting from):
 
-*   **Classic Room:** from 480 PLN / night
+*   **Classic Room:** from 490 PLN / night
 *   **Superior Room:** from 620 PLN / night
 *   **Junior Suite:** from 760 PLN / night
 *   **Executive Suite:** from 1,290 PLN / night

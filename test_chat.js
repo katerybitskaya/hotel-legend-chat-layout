@@ -1,7 +1,7 @@
 const io = require('socket.io-client');
 
-const socket = io('https://localhost:3000', {
-    rejectUnauthorized: false
+const socket = io('http://localhost:3000', {
+    // rejectUnauthorized: false
 });
 
 socket.on('connect', () => {

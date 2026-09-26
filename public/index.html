@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Legend ★★★★ — Bielsko-Biała</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 5 L90 25 L90 75 L50 95 L10 75 L10 25 Z' fill='%231a1a1a'/><path d='M50 20 L75 35 L75 65 L50 80 L25 65 L25 35 Z' fill='%23d4af37'/><text x='50' y='65' font-size='40' text-anchor='middle' fill='white' font-family='serif'>L</text></svg>" />
   <script src="chatbot.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +33,31 @@
       <li><a href="#location">Location</a></li>
     </ul>
     <a href="#booking" class="nav-book">Book Now</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 6h18M3 12h18M3 18h18" />
+      </svg>
+    </button>
   </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </svg>
+    </button>
+    <ul class="drawer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#dining">Dining</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#location">Location</a></li>
+    </ul>
+    <a href="#booking" class="btn-outline drawer-book">Book Now</a>
+  </aside>
 
 
   <section class="hero">
@@ -179,7 +205,8 @@
 
         <div class="room-card">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img src="images/Classic-Rooms.jpg" alt="Classic Room" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/Classic-Rooms.jpg" alt="Classic Room"
+              style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
             <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore Room
@@ -229,7 +256,8 @@
 
         <div class="room-card">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img src="images/Executive-Suite.jpg" alt="Executive Suite" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/Executive-Suite.jpg" alt="Executive Suite"
+              style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
             <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore Suite
@@ -254,7 +282,8 @@
 
         <div class="room-card" style="grid-column: span 2;">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img src="images/Legend-Penthouse.jpg" alt="Penthouse Suite" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/Legend-Penthouse.jpg" alt="Penthouse Suite"
+              style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
             <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore
@@ -281,7 +310,8 @@
 
         <div class="room-card">
           <div class="photo-ph room-photo" style="height:400px;">
-            <img src="images/Superior-Room.jpg" alt="Superior Room" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/Superior-Room.jpg" alt="Superior Room"
+              style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="room-photo-overlay">
             <a href="#" class="btn-ghost" style="color:#fff; border-bottom-color:rgba(255,255,255,0.4)">Explore Room
@@ -320,7 +350,8 @@
 
       <div class="amenities-layout">
         <div class="amenities-photo photo-ph">
-          <img src="images/Bathroom-detail.jpg" alt="Bathroom Detail" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="images/Bathroom-detail.jpg" alt="Bathroom Detail"
+            style="width: 100%; height: 100%; object-fit: cover;">
         </div>
 
         <div class="amenities-list">
@@ -428,8 +459,7 @@
               style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div class="dining-side-photo photo-ph">
-            <img src="images/meal.jpg" alt="Legend Bar"
-              style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/meal.jpg" alt="Legend Bar" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
