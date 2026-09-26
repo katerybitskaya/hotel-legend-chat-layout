@@ -45,9 +45,6 @@ hotel/
    node serwis.js
    ```
 5. Open `http://localhost:3000` in your browser.
-   For local testing without a domain, switch the socket.io address in `public/chatbot.js`
-   (lines 5–6 and 11–12) to `http://localhost:3000`; on the VPS / behind the tunnel keep
-   `hotel.altora.ovh`.
 
 ## Chatbot Configuration
 
@@ -57,9 +54,9 @@ The chatbot behaviour is controlled by two Markdown files:
 
 Edit these files to customise the chatbot without touching the server code.
 
-## Production (VPS)
+## Production
 
-The server is managed by PM2:
+The server can be managed by PM2:
 ```bash
 pm2 start ecosystem.config.js
 pm2 save
