@@ -8,7 +8,8 @@ const path = require('path');
 const dotenv = require('dotenv');
 
 const ENV_FILE = process.env.ENV_FILE
-    || (fs.existsSync(path.join(__dirname, '.env.local')) ? '.env.local' : '.env');
+    || ['.env.local', '.env', '.env.vps'].find(f => fs.existsSync(path.join(__dirname, f)))
+    || '.env';
 dotenv.config({ path: path.join(__dirname, ENV_FILE) });
 
 const { GoogleGenAI } = require("@google/genai");

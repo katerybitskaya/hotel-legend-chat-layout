@@ -6,9 +6,6 @@ module.exports = {
     ignore_watch: ["node_modules", "history", "history/*", "chatbot"],
     env: {
       NODE_ENV: "development",
-    },
-    env_vps: {
-      ENV_FILE: ".env.vps",
     }
   }]
 };
