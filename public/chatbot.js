@@ -2,14 +2,12 @@
     if (document.getElementById('chatbot-widget-container')) return;
 
     const socketScript = document.createElement('script');
-    //socketScript.src = 'http://localhost:3000/socket.io/socket.io.js'; //для локального
-    socketScript.src = 'https://hotel.altora.ovh/socket.io/socket.io.js'; //для VNS
+    socketScript.src = '/socket.io/socket.io.js'; 
     socketScript.onload = initChatbot;
     document.head.appendChild(socketScript);
 
     function initChatbot() {
-        const SERVER_URL = 'hotel.altora.ovh'; //для VNS
-        //const SERVER_URL = 'http://localhost:3000'; //для локального
+        const SERVER_URL = location.origin; 
 
         function generateUUID() {
             return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
@@ -25,7 +23,6 @@
                 date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
                 expires = "; expires=" + date.toUTCString();
             }
-            // Secure только на https — иначе на http браузер не сохранит cookie
             var secure = location.protocol === 'https:' ? '; Secure' : '';
             document.cookie = name + "=" + (value || "") + expires + "; path=/" + secure + "; SameSite=Strict";
         }
@@ -259,8 +256,6 @@
             query: {
                 sessionId: sessionId
             },
-            // Сразу пробуем WebSocket (без долгого старта через HTTP-polling);
-            // если WebSocket недоступен — автоматически переключаемся на polling
             transports: ['websocket', 'polling'],
             tryAllTransports: true
         });

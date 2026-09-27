@@ -1,6 +1,8 @@
 node_modules/
 .env
-historia/
+.env.*
+!.env.example
+history/
 *.key
 *.crt
 *.pem

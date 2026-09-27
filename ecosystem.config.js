@@ -1,11 +1,14 @@
 module.exports = {
   apps: [{
-    name: "serwis",
-    script: "./serwis.js",
-    watch: false, // без авто-перезапуска при изменении файлов (после правок: pm2 restart serwis)
-    ignore_watch: ["node_modules", "historia", "historia/*", "chatbot"],
+    name: "server",
+    script: "./server.js",
+    watch: false, 
+    ignore_watch: ["node_modules", "history", "history/*", "chatbot"],
     env: {
       NODE_ENV: "development",
+    },
+    env_vps: {
+      ENV_FILE: ".env.vps",
     }
   }]
 };

@@ -20,14 +20,14 @@ hotel/
 │   ├── fonts/          # Cormorant Garamond & Jost (woff2, SIL OFL)
 │   ├── script.js       # Page interactions
 │   └── chatbot.js      # Chatbot UI & socket client
-├── serwis.js           # Node.js server (Express + Socket.io + Gemini)
-├── ecosystem.config.js # PM2 process manager config (production)
+├── server.js           # Node.js server (Express + Socket.io + Gemini)
+├── ecosystem.config.js # PM2 process manager config
 ├── chatbot/            # Files used by the AI assistant
-│   ├── bazawiedzy.md   # Knowledge base about the hotel
+│   ├── knowledge-base.md # Knowledge base about the hotel
 │   └── prompt.md       # System prompt / persona for the AI assistant
 ├── package.json
-├── .env.example        # Template for .env
-└── .env                # API keys (not in repository)
+├── .env.example        # Settings template (copy to .env)
+└── .env                # Your settings and API key (not in repository)
 ```
 
 ## Setup
@@ -37,36 +37,40 @@ hotel/
    ```bash
    npm install
    ```
-3. Create a `.env` file in the project root (copy `.env.example`):
+3. Create a `.env` file from the template and set at least `GEM_KEY`:
+   ```bash
+   cp .env.example .env
+   ```
    ```env
+   PORT=3000
+   USE_HTTPS=false
    GEM_KEY=your_google_gemini_api_key
    GEM_MODEL=gemini-2.5-flash
-   CHAT_WLASNY=false
    ```
-   The port is fixed in `serwis.js` (`const PORT = 3000`) and is not read from `.env`.
-4. Start the server:
-   ```bash
-   node serwis.js
-   ```
+   `USE_HTTPS=true` serves `https://localhost:PORT` with your own certificate
+   (`SSL_KEY` / `SSL_CERT`). The chatbot widget connects to the same address the page was opened
+   from, so no URLs need to be changed in the frontend.
+4. Start the server — one of two ways:
+   - **Node.js** (the terminal window must stay open):
+     ```bash
+     node server.js
+     ```
+   - **PM2** (runs in the background; install once with `npm install -g pm2`):
+     ```bash
+     pm2 start ecosystem.config.js
+     ```
+     Useful commands: `pm2 logs server`, `pm2 restart server`, `pm2 stop server`.
 5. Open `http://localhost:3000` in your browser.
 
 ## Chatbot Configuration
 
 The chatbot behaviour is controlled by two Markdown files in the `chatbot/` folder:
-- **`bazawiedzy.md`** — knowledge base with information about the hotel (rooms, dining, amenities, etc.)
+- **`knowledge-base.md`** — knowledge base with information about the hotel (rooms, dining, amenities, etc.)
 - **`prompt.md`** — system instruction that defines the AI assistant's persona and rules
 
 Edit these files to customise the chatbot without touching the server code.
 
-## Production
-
-The server can be managed by PM2:
-```bash
-pm2 start ecosystem.config.js
-pm2 save
-```
-
 ## Notes
 
-- `.env`, `historia/` (chat history), and SSL certificate files are excluded from Git.
-- For local development the server uses plain HTTP. SSL is available via commented-out code in `serwis.js`.
+- `.env`, `.env.*` (except `.env.example`), `history/` (chat history) and SSL certificate files are excluded from Git.
+- By default the server uses plain HTTP (`USE_HTTPS=false`).
