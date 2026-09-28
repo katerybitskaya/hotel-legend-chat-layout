@@ -107,7 +107,6 @@ io.on('connection', (socket) => {
             const response = await ai.models.generateContent({
                 model: GEM_MODEL,
                 contents: prompt,
-                // chatbot/prompt.md — роль и правила ответа ассистента
                 config: { systemInstruction },
             });
 
